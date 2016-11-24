@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="/public/css/style.css">
+<link rel="stylesheet" href="/public/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="page-header">
+  <h1>MY CHESS <small>Classic games portal</small></h1>
+  <a class="dashboard-logout" href="/logout">Logout</a>
+	</div>
+	<div id="dashboard-wrapper">	
+		<div id="active-players-box">
+			
+			<div id="active-players">
+			<div class="page-header-actpl">
+  				<center><h1><small>Active Players</small></h1></center>
+			</div>
+				<ul id="players" class="nav nav-pills nav-stacked">
+				</ul>
+			</div>
+			<center><button disabled="disabled" id="challengePlayer" class="btn btn-danger">Challenge</button></center>
+		</div>
+
+		<div class="dashboard-popup disabled" id="incoming-challenge-popup">
+			<div class="popup-overlay"></div>
+			<div class="popup-inner">
+				<h5 class="popup-text"><span id="popup-challenger">Name</span> is challenging you! Do you accept?</h5>
+				<center><button class="popup-yes popup-button btn btn-success popup-button">Yes</button>
+				<button class="popup-no popup-button btn btn-danger popup-button">No</button></center>
+			</div>
+		</div>
+		<div class="dashboard-popup disabled" id="outstanding-challenge-popup">
+			<div class="popup-overlay"></div>
+			<div class="popup-inner">
+				<h5 class="popup-text">You have challenged <span id="popup-target">Name</span>! Awaiting response...</h5>
+				<center><button id="cancelChallengebtn" class="popup-action btn btn-warning">Cancel Challenge</button></center>
+			</div>
+		</div>
+		<div class="dashboard-popup disabled" id="info-popup">
+			<div class="popup-overlay"></div>
+			<div class="popup-inner">
+				<h5 class="popup-text"></h5>
+				<center><button class="popup-action btn btn-info popup-button">OK</button></center>
+			</div>
+		</div>
+	<div class="gameboard disabled">
+		<div class="gameboard-overlay"></div>
+		<div class="gameboard-inner">
+			<div class="gameboard-players">
+				<div class="gameboard-players-inner">
+					<h3 class="opponent">Opponent</h3>
+					<div class="spacer"></div>
+					<h3 class="turn-indicator">It is your turn</h3>
+					<div class="spacer"></div>
+					<h3 class="player">You</h3>
+				</div>
+			</div>
+			<div class="gameboard-play-area">
+				
+			</div>
+			<div class="gameboard-moves">
+				<div class="gameboard-moves-inner">
+					<div class="gameboard-moves-container">
+
+					</div>
+					<button class="gameboard-resign-button">Resign</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/public/js/script.js"></script>
+</body>
+</html>
